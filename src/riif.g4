@@ -1,4 +1,4 @@
-grammar riif-0-0 ;
+grammar riif;
 
 rule:start +
     ;
