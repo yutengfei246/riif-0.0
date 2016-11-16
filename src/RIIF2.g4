@@ -4,7 +4,7 @@
     */
 
 grammar RIIF2 ;
-import RIIF2Parser ;
+import RIIF2ParserRules, KEYWORDS , RIIF2LexerRules, GENERALTOKENS;
 
 /*Programmar File RIIF-2 */
 program
@@ -18,7 +18,7 @@ declaration
     ;
 /*Component Declaration*/
 component_decl  // RIIF-2 : implements feature
-    : COMPONMENT ident ( EXTNEDS ident )? (IMPLEMENTS ident ( ',' ident )* )?  ';'
+    : COMPONENT ident ( EXTENDS ident )? (IMPLEMENTS ident ( ',' ident )* )?  ';'
       component_body_element* END_COMPONENT
     ;
 component_body_element
@@ -40,11 +40,11 @@ environment_body_element
     ;
 /*Requirement Declaration*/
 requirement_decl
-    : REQYUREMENT ident ';' assertion* END_REQUIREMENT
+    : REQUIREMENT ident ';' assertion* END_REQUIREMENT
     ;
 /*Parameter Declaration*/
 parameter_decl
-    : PARAMTER ident ':' complex_type (':=' expression )? ';'
+    : PARAMETER ident ':' complex_type (':=' expression )? ';'
     ;
 /*Environment Declaration*/
 env_parameter_decl
@@ -72,7 +72,7 @@ assertion
     ;
 /*Types*/
 primitive_type
-    : TPYE_FLOAT
+    : TYPE_FLOAT
     | TYPE_INTEGER
     | TYPE_STRING
     ;
