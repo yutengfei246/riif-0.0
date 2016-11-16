@@ -4,7 +4,8 @@
     */
 
 grammar RIIF2 ;
-import RIIF2ParserRules, KEYWORDS , RIIF2LexerRules, GENERALTOKENS;
+//import KEYWORDS,RIIF2ParserRules, GENERALTOKENS, RIIF2LexerRules;
+import RIIF2ParserRules ;
 
 /*Programmar File RIIF-2 */
 program

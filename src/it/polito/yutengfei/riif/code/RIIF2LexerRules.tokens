@@ -1,0 +1,6 @@
+StringLiteral=1
+FloatingPointLiteral=2
+DecimalLiteral=3
+Ident=4
+Hier_ident=5
+Attr_ident=6
