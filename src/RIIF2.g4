@@ -4,8 +4,7 @@
     */
 
 grammar RIIF2 ;
-options {tokenVocab = KEYWORDS; tokenVocab = GENERALTOKENS;}
-import RIIF2Lexer ;
+import RIIF2Parser ;
 
 /*Programmar File RIIF-2 */
 program
@@ -15,7 +14,7 @@ declaration
     : component_decl
     | environment_decl
     | requirement_decl
-    | template_decl // RIIF-2 : template declarartion
+ // RIIF-2 : template declarartion
     ;
 /*Component Declaration*/
 component_decl  // RIIF-2 : implements feature
@@ -28,7 +27,7 @@ component_body_element
     | child_component_decl
     | fail_mode_decl
     | assignment
-    | set // RIIF-2: set implemeneted abstract paraments constants
+ // RIIF-2: set implemeneted abstract paraments constants
     | assertion
     ;
 /*Environment declaration*/
@@ -87,11 +86,6 @@ complex_type
     : primitive_type
     | enum_type
     | user_type
-    ;
-/*Unit Rules*/
-units
-    : UNIT_VOLTS
-    | UNIT_FITS
     ;
 
 
